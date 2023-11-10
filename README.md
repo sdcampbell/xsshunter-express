@@ -3,6 +3,8 @@
 
 The fastest way to set up XSS Hunter to test and find blind cross-site scripting vulnerabilities.
 
+This fork includes changes which allow it to work correctly when accessed via a Cloudflare tunnel.
+
 ## Setup (Five minutes, try not to skim too much)
 
 ### Requirements
