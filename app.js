@@ -205,7 +205,8 @@ async function get_app_server() {
 		var payload_fire_data = {
 			id: payload_fire_id,
 			url: req.body.uri,
-			ip_address: req.connection.remoteAddress.toString(),
+			// we need to get the correct source IP from the Cloudflare header
+			ip_address: req.headers['cf-connecting-ip'],
 			referer: req.body.referrer,
 			user_agent: req.body['user-agent'],
 			cookies: req.body.cookies,
